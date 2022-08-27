@@ -1,0 +1,48 @@
+﻿@model FirmaYonetimSistemi.Entities.Urun
+
+@{
+    ViewData["Title"] = "Yeni Kayıt Oluştur";
+}
+
+<h1>Yeni Kayıt</h1>
+
+<h4>Urun</h4>
+<hr />
+<div class="row">
+    <div class="col-md-4">
+        <form asp-action="Create">
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+            <div class="form-group">
+                <label asp-for="UrunAdi" class="control-label"></label>
+                <input asp-for="UrunAdi" class="form-control" />
+                <span asp-validation-for="UrunAdi" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Fiyat" class="control-label"></label>
+                <input asp-for="Fiyat" class="form-control" />
+                <span asp-validation-for="Fiyat" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Stok" class="control-label"></label>
+                <input asp-for="Stok" class="form-control" />
+                <span asp-validation-for="Stok" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Birim" class="control-label"></label>
+                <input asp-for="Birim" class="form-control" />
+                <span asp-validation-for="Birim" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <input type="submit" value="Create" class="btn btn-primary" />
+            </div>
+        </form>
+    </div>
+</div>
+
+<div>
+    <a asp-action="Index">Bir Önceki Sayfa</a>
+</div>
+
+@section Scripts {
+    @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
+}

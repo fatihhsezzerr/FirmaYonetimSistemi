@@ -1,0 +1,34 @@
+﻿@model FirmaYonetimSistemi.Entities.Personel
+@{
+    ViewData["Title"] = "Giriş Yap";
+}
+
+<h1>Giriş Yap</h1>
+<html>
+    <head>
+
+    </head>
+    <body>
+      <div class="row">
+    <div class="col-md-4">
+        @ViewBag.Mesaj
+        @using(Html.BeginForm("GirisYap","Login",FormMethod.Post))
+        {
+            <div class="form-group">
+                <label asp-for="KullaniciAdi" class="control-label"></label>
+                <input asp-for="KullaniciAdi" class="form-control" />
+                <span asp-validation-for="KullaniciAdi" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Sifre" class="control-label"></label>
+                <input asp-for="Sifre" class="form-control" />
+                <span asp-validation-for="Sifre" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <input type="submit" value="Login" class="btn btn-primary" />
+            </div>
+        }
+    </div>
+</div>
+    </body>
+</html>

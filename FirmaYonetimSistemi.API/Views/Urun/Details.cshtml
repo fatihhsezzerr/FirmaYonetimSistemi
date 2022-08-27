@@ -1,0 +1,42 @@
+﻿@model FirmaYonetimSistemi.Entities.Urun
+
+@{
+    ViewData["Title"] = "Detay";
+}
+
+<h1>Detay</h1>
+
+<div>
+    <h4>Urun</h4>
+    <hr />
+    <dl class="row">
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.UrunAdi)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.UrunAdi)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.Fiyat)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.Fiyat)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.Stok)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.Stok)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.Birim)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.Birim)
+        </dd>
+    </dl>
+</div>
+<div>
+    <a asp-action="Edit" asp-route-id="@Model.Id">Düzenle</a> |
+    <a asp-action="Index">Bir Önceki Sayfa</a>
+</div>
